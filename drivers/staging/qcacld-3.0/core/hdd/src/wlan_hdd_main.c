@@ -16993,6 +16993,7 @@ const struct file_operations wlan_hdd_state_fops = {
 	.release = wlan_hdd_state_ctrl_param_release,
 };
 
+#ifdef MODULE
 static int  wlan_hdd_state_ctrl_param_create(void)
 {
 	unsigned int wlan_hdd_state_major = 0;
@@ -17047,6 +17048,7 @@ class_err:
 dev_alloc_err:
 	return -ENODEV;
 }
+#endif
 
 static void wlan_hdd_state_ctrl_param_destroy(void)
 {
@@ -19654,4 +19656,3 @@ static const struct kernel_param_ops timer_multiplier_ops = {
 };
 
 module_param_cb(timer_multiplier, &timer_multiplier_ops, NULL, 0644);
-
