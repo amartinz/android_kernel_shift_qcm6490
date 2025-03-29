@@ -61,7 +61,7 @@
 #define WLS_FW_UPDATE_TIME_MS		1000
 #endif
 #define WLS_FW_BUF_SIZE			128
-#define DEFAULT_RESTRICT_FCC_UA		1000000
+#define DEFAULT_RESTRICT_FCC_UA		(500 * 1000)
 
 enum usb_connector_type {
 	USB_CONNECTOR_TYPE_TYPEC,
