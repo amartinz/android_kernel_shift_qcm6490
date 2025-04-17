@@ -42,3 +42,5 @@ config SHIFT_PROJECT
 	  as i am.
 
 endmenu
+
+source "backports/Kconfig"
